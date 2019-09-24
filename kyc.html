@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Sats.cc</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="google-site-verification" content="g7mlCW15-4FTz3tfUYCmjpjCePgz-KLXCwCE6hBQ-gQ" />
+    <!--===============================================================================================-->
+	<link rel='reference' hreflang='en' href='https://sats-add64.firebaseapp.com' />
+	<!--===============================================================================================-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bs-stepper/dist/css/bs-stepper.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/bitcoin-cc.svg" />
+
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <!--===============================================================================================-->
+    <script  src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script  src="https://www.gstatic.com/firebasejs/6.5.0/firebase-auth.js"></script>
+  	<script  src="https://www.gstatic.com/firebasejs/6.5.0/firebase-storage.js"></script>
+  	<script  src="https://www.gstatic.com/firebasejs/6.5.0/firebase-database.js"></script>
+  	<script  src="https://www.gstatic.com/firebasejs/6.5.0/firebase-firestore.js"></script>
+
+
+
+  	<script >
+
+  		const firebaseConfig = {
+        apiKey: "AIzaSyBlrfUit357fhPG73BnxJx0VZhEBshIpPQ",
+        authDomain: "sats-cc.firebaseapp.com",
+        databaseURL: "https://sats-cc.firebaseio.com",
+        projectId: "sats-cc",
+        storageBucket: "sats-cc.appspot.com",
+        messagingSenderId: "990536701874",
+        appId: "1:990536701874:web:436f6a754296d87af276ab"
+  		};
+  		// Initialize Firebase
+  		firebase.initializeApp(firebaseConfig);
+  		// var db = firebase.firestore();
+
+  		// //THE FOLLOWING SHOULD BE ON EVERYPAGE
+  		// /*For each of your app's pages that need information about the signed-in user,
+  		// attach an observer to the global authentication object.
+  		// This observer gets called whenever the user's sign-in state changes.*/
+  		// firebase.auth().onAuthStateChanged(function(user) {
+  		// 	if (user) {
+  		// 		// User is signed in.
+  		// 		console.log("USER DETAILS: ",user);
+
+  		// 		$('#logout').show();
+  		// 		$('#logout').addClass('unhide');
+
+  		// 		$('#profilecard').show();
+  		// 		$('#entrycard').hide();
+
+  		// 		const displayName = user.displayName;
+  		// 		const email = user.email;
+  		// 		const emailVerified = user.emailVerified;
+  		// 		const photoURL = user.photoURL;
+  		// 		const isAnonymous = user.isAnonymous;
+  		// 		const uid = user.uid;
+  		// 		const providerData = user.providerData;
+  		// 		// ...
+  		// 	} else {
+  		// 		// User is signed out.
+  		// 		// ...
+  		// 		$('#logout').hide()
+  		// 		$('#profilecard').hide()
+  		// 		$('#entrycard').show()
+
+  		// 	}
+  		// });
+
+  	</script>
+
+    <!-- update the version number as needed -->
+    <!-- <script defer src="/__/firebase/6.5.0/firebase-app.js"></script>
+
+
+    <script defer src="/__/firebase/6.5.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/6.5.0/firebase-database.js"></script> -->
+    <!-- <script defer src="/__/firebase/6.5.0/firebase-messaging.js"></script> -->
+    <!-- <script defer src="/__/firebase/6.5.0/firebase-storage.js"></script> -->
+    <!-- initialize the SDK after all desired features are loaded -->
+    <!-- <script defer src="/__/firebase/init.js"></script> -->
+    <!--===============================================================================================-->
+
+<!--===============================================================================================-->
+
+  </head>
+<!--===============================================================================================-->
+
+<body>
+
+<br>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+      <a class="navbar-brand sats-ico" href="index.html">
+            <img class="sats-ico d-inline-block align-top" src='assets/images/saturn0.svg'>Sats <span style='font-size: 14px;color: #37c0f7'>Prototype</span>
+          </a>
+      </div>
+    </div>
+  
+    </nav>
+    
+        <button class="centerme" id="logout">Logout</button>
+    
+    
+    <br>
+
+<div class='container' id='kyc-details'>
+    <h1>
+        AML/KYC Policy
+    </h1>
+    <hr>
+    <h3>
+        Introduction
+    </h3>
+    <br>
+    <p>
+
+            sats.cc Anti-Money Laundering and Know Your Customer Policy (hereinafter – the “AML/KYC Policy”) is designated to prevent and mitigate possible risks of sats.cc being involved in any kind of illegal activity.
+    </p> 
+    <br>
+
+    <p>
+            Both international and local regulations require sats.cc to implement effective internal procedures and mechanisms to prevent money laundering, terrorist financing, drug and human trafficking, proliferation of weapons of mass destruction, corruption and bribery and to take action in case of any form of suspicious activity from its Users.              
+
+        </p>   
+  
+          <br>
+
+            <h5>AML/KYC Policy covers the following matters:</h5>
+        <b>
+              <p>  Verification procedures.                </p>
+              <br>
+
+
+                Compliance Officer.                </p>
+                <br>
+
+
+                Monitoring Transactions.                </p>
+                <br>
+
+
+                <p>Risk Assessment.                </p>
+                <br>
+
+
+            </b>
+            <h4>1. Verification procedures                </h4>
+            <br>
+
+
+            
+            <p>One of the international standards for preventing illegal activity is customer due diligence (“CDD”). According to CDD, sats.cc establishes its own verification procedures within the standards of anti-money laundering and “Know Your Customer” frameworks.                </p>
+
+            <br>
+
+            <h4>1.1. Identity verification                </h4>
+            <br>
+
+            
+            <p>sats.cc’s identity verification procedure requires the User to provide sats.cc with reliable, independent source documents, data or information (e.g., national ID, international passport, bank statement, utility bill). For such purposes sats.cc reserves the right to collect User’s identification information for the AML/KYC Policy purposes.                </p>
+
+            
+            <p>sats.cc will take steps to confirm the authenticity of documents and information provided by the Users. All legal methods for double-checking identification information will be used and sats.cc reserves the right to investigate certain Users who have been determined to be risky or suspicious.                </p>
+
+            
+            <p>sats.cc reserves the right to verify User’s identity in an on-going basis, especially when their identification information has been changed or their activity seemed to be suspicious (unusual for the particular User). In addition, sats.cc reserves the right to request up-to-date documents from the Users, even though they have passed identity verification in the past.User’s identification information will be collected, stored, shared and protected strictly in accordance with the sats.cc’s Privacy Policy and related regulations.                </p>
+
+            
+            <p>Once the User’s identity has been verified, sats.cc is able to remove itself from potential legal liability in a situation where its Services are used to conduct illegal activity.                </p>
+
+            <br>
+
+          <h4>  1.2. Card verification                </h4>
+
+          <br>
+
+            <p>The Users who are intended to use payment cards in connection with the sats.cc’s Services have to pass card verification in accordance with instructions available on the sats.cc’s Site.                </p>
+            <br>
+
+            
+          <h4>  2. Compliance Officer                </h4>
+          <br>
+
+            
+            <p>The Compliance Officer is the person, duly authorized by sats.cc, whose duty is to ensure the effective implementation and enforcement of the AML/KYC Policy. It is the Compliance Officer’s responsibility to supervise all aspects of sats.cc’s anti-money laundering and counter-terrorist financing, including but not limited to:</p>
+            
+            <p>a. Collecting Users’ identification information. b. Establishing and updating internal policies and procedures for the completion, review, submission and retention of all reports and records required under the applicable laws and regulations. c. Monitoring transactions and investigating any significant deviations from normal activity. d. Implementing a records management system for appropriate storage and retrieval of documents, files, forms and logs. e. Updating risk assessment regularly. f. Providing law enforcement with information as required under the applicable laws and regulations.</p>
+            <p>The Compliance Officer is entitled to interact with law enforcement, which are involved in prevention of money laundering, terrorist financing and other illegal activity. </p>
+            <br>
+            
+            <h4> 3. Monitoring Transactions </h4>
+            <br>
+            <p>The Users are known not only by verifying their identity (who they are) but, more importantly, by analyzing their transactional patterns (what they do). Therefore, sats.cc relies on data analysis as a risk-assessment and suspicion detection tool. sats.cc performs a variety of compliance-related tasks, including capturing data, filtering, record-keeping, investigation management, and reporting. System functionalities include:</p>
+            <br>
+            <p>1) Daily check of Users against recognized “black lists” (e.g. OFAC), aggregating transfers by multiple data points, placing Users on watch and service denial lists, opening cases for investigation where needed, sending internal communications and filling out statutory reports, if applicable;                </p>
+
+            <br>
+            <p>2) Case and document management.                </p>
+
+            <br>
+            <p>With regard to the AML/KYC Policy, sats.cc will monitor all transactions and it reserves the right to:                </p>
+            <br>
+
+            
+                <p>ensure that transactions of suspicious nature are reported to the proper law enforcement through the Compliance Officer;
+                request the User to provide any additional information and documents in case of suspicious transactions;
+                suspend or terminate User’s Account when sats.cc has reasonably suspicion that such User engaged in illegal activity.                </p>
+
+                <br>
+
+            <p>The above list is not exhaustive and the Compliance Officer will monitor Users’ transactions on a day-to-day basis in order to define whether such transactions are to be reported and treated as suspicious or are to be treated as bona fide.                </p>
+
+            <br>
+
+            <h4>4. Risk Assessment</h4>
+            <br>
+
+          <p>sats.cc, in line with the international requirements, has adopted a risk-based approach to combating money laundering and terrorist financing. By adopting a risk-based approach, sats.cc is able to ensure that measures to prevent or mitigate money laundering and terrorist financing are commensurate to the identified risks. This will allow resources to be allocated in the most efficient ways. The principle is that resources should be directed in accordance with priorities so that the greatest risks receive the highest attention.</p>
+          <br>
+
+          <br>
+<p><em>This document was last updated on September 18, 2019</em></p>
+
+          <hr>
+</div>
+<hr>
+
+<div class="end-line"></div>
+
+<!--===============================================================================================-->
+
+<!-- <script src="vendor/jquery/jquery-3.2.1.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bs-stepper/dist/js/bs-stepper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+<!--===============================================================================================-->
+
+<!--===============================================================================================-->
+
+<script src="assets/js/script.js"></script>
+<script src="assets/js/auth.js"></script>
+
+</body>
+
+
+<hr>
+<hr>
+<footer class='footer centerme'>
+    <div class=row>
+        <div class='col'>
+        <h4 class='formp'>Business</h4>
+        <a href="about.html">About Us
+        </a>
+        <br>	
+        <a href="bounties.html"> Bounties
+        </a>
+        <br>    
+        <a href="contact.html">Contact
+        </a>
+        <br>
+    
+        </div>
+        <div class='col'>
+        <h4 class='formp'>Legal</h4>
+    
+        <a href="terms.html">Terms of Service
+        </a>
+        <br>
+    
+        <a href="privacy.html">Privacy Policy
+        </a>
+        <br>
+    
+        <a href="kyc.html"><p>AML/Compliance</p>
+        </a>
+        <br>
+    
+    </div>
+    <br>s
+</footer>
+
+<p class='centerme'><b>Sats.cc © 2019 Matrix Network International B.V. All Rights Reserved.</b> </p>
+<p class='centerme' style="font-size: 13px;"><em>This epic background was designed @ svgbackgrounds.com & icons from flaticon.com/authors/freepik</em></p>
+<br>
+</html>
+<!--===============================================================================================-->

@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css?family=Rajdhani&display=swap');
+
+/*green: #5863f8 #9fd356-JUNEBUD ; blue:#3094FF 37c0f7ZIMA grey:e8e8e8 violet:6880FF zima:1EB4E9 */
+#calc-form{
+  font-size: 17px !important;
+}
+#satstacker{
+  font-size: 17px  !important;
+
+}
+.bitnet{
+  position: fixed;
+  margin-top:-260px;
+  width:428px;
+  height:620px;
+  opacity: 0.3;
+  float: right;
+}
+.nav{
+  display: block;
+  position: fixed;
+}
+.navbar-header {
+  color: #f2f2f2;
+  border : none !important;
+}
+.sats-ico{
+	width: 49px;
+	height: 49px;
+  display: block;
+  margin-top: -6px;
+  margin-right: 15px;
+	color: #37c0f7;
+
+}
+
+.heads{
+	font-weight: bold;
+	color: #37C0F7;
+	display: block;
+}
+
+.entry-btn{
+  font-size: 29px;
+}
+
+.mainp{
+	color: #F2F2F2 !important;
+	font-size: 21px;
+}
+/* .outline{
+  border:  1px #342e37 solid;
+} */
+.subp{
+	color: #F2F2F2 !important;
+	font-size: 19px;
+}
+
+.formp{
+  font-size: 27px;
+}
+.lecard {
+  /* padding: 8% 0 0; */
+  margin: auto;
+  opacity: 0.9;
+
+	/* background-image: url("https://backgroundcheckall.com/wp-content/uploads/2017/12/plain-white-background-images-hd-7.jpg") !important; */
+	/* background-repeat: no-repeat; */
+}
+
+.partners{
+	  margin: auto;
+}
+/* .{
+	border: 1px solid #37c0f7;
+} */
+.footer{
+	background-color:transparent;
+	font-weight: bold;
+
+}
+
+/* .form {
+
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 420px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+} */
+
+.labelo{
+  color: #37c0f7;
+}
+.limit{
+  /* width:50px; */
+  word-wrap: break-word;
+}
+input {
+  font-family: "Rajdhani", sans-serif;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 17px;
+}
+.output{
+  font-size: 21px;
+  font-weight: bold;
+}
+.output-lg{
+  font-size: 29px;
+  font-weight: bold;
+}
+.output-sm{
+  font-size: 16px;
+  font-weight: bold;
+}
+.output-amounts{
+  font-size: 23px;
+  font-weight: bold;
+}
+
+button {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 420px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  font-family: "Rajdhani", sans-serif;
+  text-transform: uppercase;
+  background: #37c0f7;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 19px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+
+.btn{
+  font-size: 23px;
+  color: #37c0f7;
+}
+
+.btn-block{
+  width:100%;
+  margin-left:0;
+  margin-right:0;
+  padding-left:0;
+  padding-right:0;
+  display:block !important;
+  text-align:center;
+  background-color: transparent;
+  color: #37c0f7;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  width: 100%;
+  height: 50px;
+}
+.btn:not(:disabled):not(.disabled) {
+  flex: 1;
+  cursor: pointer;
+  border-radius:0px;
+  background-color: transparent;
+  border: none;
+  font-size: 23px;
+  color: #37c0f7;
+
+}
+.btn:hover{
+  color: #f2f2f2;
+}
+
+.calc {
+	/* background-image: url("https://www.barraques.cat/pngfile/big/7-73040_normal-architecture.jpg") !important; */
+	/* background-size: cover; */
+
+  /* position: relative; */
+  /* z-index: 1; */
+  background: #ffffff;
+  max-width: 420px;
+  margin: 0 auto 100px;
+  /* padding: 5px; */
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.calc input {
+  font-family: "Rajdhani", sans-serif;
+  background: #ffffff;
+  width: 100%;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+.calc button {
+  font-family: "Rajdhani", sans-serif;
+  text-transform: uppercase;
+  background: #342e37;
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+  padding: 15px;
+  color: #37c0f7;
+  font-size: 19px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.a-menu:hover {
+
+  text-decoration: none;
+}
+
+
+button:hover,.form button:active,.form button:focus {
+  background: #f2f2f2;
+  border: 1px solid #37c0f7;
+  color: #342e37;
+}
+/* .side-menu-main{
+  border-right: 1px solid #f2f2f2;
+} */
+.form button:hover,.form button:active,.form button:focus {
+  border: 1px solid #37c0f7;
+  background: #342e37;
+  color: #37c0f7;
+}
+
+/* .btn-group{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 100%;
+} */
+
+.sell-btn{
+  background: #342e37;
+  color: #37c0f7;
+}
+.form .sell-btn button:hover button:active,.form button:focus{
+  border: 3px solid #37c0f7;
+  background: #342e37;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 17px;
+}
+.form .message a {
+  color: #5863f8;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+
+/* .stack-form-pay{
+  font-size: 21px !important;
+}
+.stack-form-calc{
+  font-size: 21px;
+} */
+/* */
+/* background-image: url("https://c.wallhere.com/photos/4e/a1/1920x1080_px_background_blue_lines_vector-1485391.jpg!d"); */
+/* background-image: url("http://wallpaperask.com/wp-content/uploads/Backgrounds-download-abstract-minimalist-wallpaper-HD.jpg"); */
+a { color: #f2f2f2; }
+
+.bit-only{
+  font-size: 17px;
+}
+
+.img{
+  border : none !important;
+}
+.img send-img:hover{
+  border: 2px solid #342e37;
+}
+
+h1.title
+{
+	/* letter-spacing: 1.4; */
+	font-weight: bold;
+	color: #37c0f7;
+  margin: 0 auto;
+	font-size: 38px;
+  display: block;
+
+}
+
+#profile-pic{
+  border-radius: 10px;
+  border: 3px inset #37c0f7;
+  /* border-spacing: 15px; */
+  /* padding: 15px; */
+}
+
+h2.title
+{
+	/* letter-spacing: 1.4; */
+	font-weight: bold;
+	color: #f2f2f2;
+	text-align: center;
+	font-size: 36px;
+}
+.veridium-img{
+	border: 5px solid #37c0f7;
+	border-radius: 19px;
+	margin-top: 3px;
+}
+
+.veridium-img2{
+	border: 3px solid #37c0f7;
+	border-radius: 13px;
+	margin-top: -8px;
+}
+
+.veridium-img3{
+	border: 3px solid #37c0f7;
+	border-radius: 13px;
+	margin-top: -8px;
+}
+
+.sepa-img{
+	margin-top: 9px;
+
+}
+.centerme{
+	margin: 0 auto;
+	text-align: center;
+  display: block;
+}
+
+.navbar-brand
+{
+	/* letter-spacing: 1.4; */
+  display: block !important;
+	font-weight: bold;
+  color: #F2F2F2;
+  font-size: 25px;
+  font-style: bold;
+  position: fixed;
+}
+
+.nav{
+  font-weight: bold;
+  color: #f2f2f2;
+  font-size: 21px;
+}
+
+#features{
+  background-color: #f2f2f2;
+}
+
+#myScrollspy {
+opacity: 0;
+transform: translate(0, 20px);
+transition: all 1s;
+}
+
+#myScrollspy.visible {
+opacity: 1;
+transform: translate(0, 0);
+}
+
+button .google-signin {
+  background-image: url('assets/images/google_signin/web/2x/light2.png');
+  background-repeat:no-repeat;
+  background-size: cover;
+
+}
+
+.leftform{
+  margin-left: -15px;
+
+}
+.leftme{
+  text-align-last: left;
+  float: left;
+}
+#send-email-link{
+  text-align: center;
+  width: 221px;
+    /* padding-bottom: 20%;  */
+}
+.enter{
+margin-top: 7px
+}
+.unhide
+{
+  display: block;
+}
+.hide
+{
+  display: none;
+}
+
+#profile-pic{
+  border-radius: 20px;
+}
+
+.end-line
+{
+	position: fixed;
+	height: 5px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #37c0f7;
+}
+
+body {
+  background-color: #342e37;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg fill-opacity='0.11'%3E%3Cpolygon fill='%2340334e' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%23433569' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%233a3487' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%232f3ea9' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23275cce' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%23298ce8' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%2337c0f7' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  /* background-attachment: fixed;
+  background-size: cover;
+  background-image: url('https://png.pngtree.com/thumb_back/fw800/back_pic/03/95/13/4757ebcead939ef.jpg');
+  background-size: cover; */
+
+  /* background-size: 1440px 780px; */
+  /* background: #76b852; /* fallback for old browsers */
+  /* background: -webkit-linear-gradient(right, #76b852, #8DC26F); */
+  /* background: -moz-linear-gradient(right, #76b852, #8DC26F); */
+  /* background: -o-linear-gradient(right, #76b852, #8DC26F); */
+  /* background: linear-gradient(to left, #76b852, #8DC26F);  */
+
+  font-family: "Rajdhani", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #f2f2f2;
+}
+
+/* input[type="text"] {
+  font-size:17px;
+} */
+
+.profile-button{
+  display: block;
+  width: 100%;
+  font-size: 12px;
+
+}
+@media (max-width: 800px) {
+	.w-25,
+	.bootstrap-select>.dropdown-toggle,
+	.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn)
+	{
+	    width: 100%!important;
+	}
+}
+
+
+.centerish{
+  text-align:center;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}

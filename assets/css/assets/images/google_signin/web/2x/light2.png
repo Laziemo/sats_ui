@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Sats.cc</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="google-site-verification" content="g7mlCW15-4FTz3tfUYCmjpjCePgz-KLXCwCE6hBQ-gQ" />
+    <!--===============================================================================================-->
+	<link rel='reference' hreflang='en' href='https://sats-add64.firebaseapp.com' />
+	<!--===============================================================================================-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bs-stepper/dist/css/bs-stepper.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/bitcoin-cc.svg" />
+
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <!--===============================================================================================-->
+    <script  src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script  src="https://www.gstatic.com/firebasejs/6.5.0/firebase-auth.js"></script>
+  	<script  src="https://www.gstatic.com/firebasejs/6.5.0/firebase-storage.js"></script>
+  	<script  src="https://www.gstatic.com/firebasejs/6.5.0/firebase-database.js"></script>
+  	<script  src="https://www.gstatic.com/firebasejs/6.5.0/firebase-firestore.js"></script>
+
+
+
+  	<script >
+
+  		const firebaseConfig = {
+  			apiKey: "AIzaSyCEdl_C9xfmuSMFYEVn6EVf1K4SaCnKgNk",
+  			authDomain: "sats-add64.firebaseapp.com",
+  			databaseURL: "https://sats-add64.firebaseio.com",
+  			projectId: "sats-add64",
+  			messagingSenderId: "883589618606",
+  			storageBucket: 'gs://sats-add64.appspot.com/',
+  			appId: "1:883589618606:web:02c57f78c0d49ef0"
+  		};
+  		// Initialize Firebase
+  		firebase.initializeApp(firebaseConfig);
+  		// var db = firebase.firestore();
+
+  		// //THE FOLLOWING SHOULD BE ON EVERYPAGE
+  		// /*For each of your app's pages that need information about the signed-in user,
+  		// attach an observer to the global authentication object.
+  		// This observer gets called whenever the user's sign-in state changes.*/
+  		// firebase.auth().onAuthStateChanged(function(user) {
+  		// 	if (user) {
+  		// 		// User is signed in.
+  		// 		console.log("USER DETAILS: ",user);
+
+  		// 		$('#logout').show();
+  		// 		$('#logout').addClass('unhide');
+
+  		// 		$('#profilecard').show();
+  		// 		$('#entrycard').hide();
+
+  		// 		const displayName = user.displayName;
+  		// 		const email = user.email;
+  		// 		const emailVerified = user.emailVerified;
+  		// 		const photoURL = user.photoURL;
+  		// 		const isAnonymous = user.isAnonymous;
+  		// 		const uid = user.uid;
+  		// 		const providerData = user.providerData;
+  		// 		// ...
+  		// 	} else {
+  		// 		// User is signed out.
+  		// 		// ...
+  		// 		$('#logout').hide()
+  		// 		$('#profilecard').hide()
+  		// 		$('#entrycard').show()
+
+  		// 	}
+  		// });
+
+  	</script>
+
+    <!-- update the version number as needed -->
+    <!-- <script defer src="/__/firebase/6.5.0/firebase-app.js"></script>
+
+
+    <script defer src="/__/firebase/6.5.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/6.5.0/firebase-database.js"></script> -->
+    <!-- <script defer src="/__/firebase/6.5.0/firebase-messaging.js"></script> -->
+    <!-- <script defer src="/__/firebase/6.5.0/firebase-storage.js"></script> -->
+    <!-- initialize the SDK after all desired features are loaded -->
+    <!-- <script defer src="/__/firebase/init.js"></script> -->
+    <!--===============================================================================================-->
+
+<!--===============================================================================================-->
+
+  </head>
+<!--===============================================================================================-->
+
+<body>
+
+
+<br>
+
+
+	<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+		<a class="navbar-brand sats-ico" href="#">
+					<img class="sats-ico d-inline-block align-top" src='assets/images/saturn0.svg'>Sats
+				</a>
+		</div>
+	</div>
+	</nav>
+
+	<button class="centerme" id="logout">Logout</button>
+
+
+<br>
+
+
+	<div class='container' id='full-landing'>
+
+	<div class='row'>
+
+		<div class='col ' id="landing">
+
+			<!-- <hr> -->
+
+			<h2 class="title" id='sub-head'> A bitcoin kiosk</h2>
+
+
+			<hr>
+
+	<br>
+
+	<br>
+
+
+	<div class='container'>
+		<!-- <div class='row'>
+		<div class='col-lg-2 col-md-2 col-sm-2 side-menu-main'>
+		<nav class="" id="myScrollspy">
+			<ul class="nav nav-pills nav-stacked">
+				<li><a class='a-menu' href="#landing"> <button class='side-nav'></button>
+				Home</a></li>
+
+				<li><a class='a-menu'href="#roadmap"><button class='side-nav'></button>
+					RoadMap</a></li>
+
+				<li><a class='a-menu'href="#about"><button class='side-nav'></button>
+					Legal</a></li>
+
+			</ul>
+		</nav>
+		</div>
+		</div> -->
+
+	<div class='row'>
+
+
+	<div class='col-lg-6 col-md-6 col-sm-12' id="left">
+
+		<div id="landing">
+
+			<p class='mainp centerme'>Our mission is to <span> <b>simplify</b></span> the process of <span> <b>buying, understanding and using bitcoin.</b></span></p>
+			<br>
+			<br>
+
+			<p class='mainp centerme'>By leveraging a combination of modern authentication techniques, we are bringing together our bitcoin liquidity providers and fiat banking partners, in building a <span><b>simple and safe crypto-fiat bridge for Europe.</b></span></p>
+			<br>
+			<br>
+			<br>
+
+
+			<h2 class='title'>Stack | Learn | Spend</h2>
+
+			<img class='centerme' src="assets/images/bitcoin.svg" style="width:77px;height:77px;">
+
+			<br>
+
+
+			<div class="centerme">
+				For more bitcoin only:<br>
+				<a class='bit-only' href="https://bitcoin-only.com/">
+				https://bitcoin-only.com/
+				</a>
+			</div>
+			<br>
+
+		</div>
+
+
+	</div>
+
+	<!-- LEFT LANDING OVER -->
+
+	<div class='col-lg-6 col-md-6 col-sm-12'>
+
+		<div class="lecard">
+
+
+			<div class="form" id='entrycard'>
+
+					<p class="formp"><b>Under Construction</b> </p>
+					<p class=""><em>We are still in our build phase :) You can register, test the platform and submit bug reports for bounties.</em> </p>
+
+				<form class="register-form" id="register-form" >
+					<input type="text" placeholder="email address" id='register-email'/>
+
+					<input type="password" placeholder="password" id='register-pass'/>
+					<input type="password" placeholder="password-repeat" id='register-pass-re'/>
+					<button class='entry-btn'>register</button>
+					<p class="message">Already registered? <a href="#">Sign In</a></p>
+				</form>
+
+				<form class="login-form" id="login-form">
+					<input type="text" placeholder="username" id='login-email'/>
+					<input type="password" placeholder="password" id='login-pass'/>
+					<button class='entry-btn'>login</button>
+					<hr>
+					<input type="image" src="assets/images/google_signin/web/2x/light2.png" id='google-signin' onclick='googleLogin()'/>
+
+					<p class="message">Not registered? <a href="#">Create an account</a></p>
+				</form>
+
+				<br>
+
+				<div class='row'>
+
+					<div class='col '>
+						<img src="assets/images/mastercard.svg" style="width:65px;height:50px;">
+					</div>
+					<div class='col '>
+						<img src="assets/images/visa.svg" style="width:65px;height:50px;">
+					</div>
+					<div class='col'>
+						<img src="assets/images/sepa.png" style="width:75px;height:45px;">
+					</div>
+
+				</div>
+
+				<div class='row'>
+					<div class='col '>
+						<a href="https://www.veridiumid.com">
+						<img class='veridium-img' src="assets/images/veridium.jpg" style="width:61px;height:61px;">
+						</a>
+					</div>
+				</div>
+				<br>
+				<div class="centerme">
+					By signing up, you are agreeging to our terms or service.<br>
+
+				</div>
+
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- RIGHT SIGNIN OVER -->
+
+	</div>
+	</div>
+	</div>
+	</div>
+<!-- OUTER MOST DIV id#full-landing-->
+
+
+
+<div class='container-fluid  hide' id='leprofile'>
+	<!-- PROFILE -->
+	<div class='row'>
+		<!-- PROFILE CARD N  SHIT-->
+		<div class='col-lg-6 col-md-6 col-sm-12 '>
+
+			<div class='row'>
+				<div class ='col'>
+
+					<div class="lecard">
+
+						<div class="form" id='profilecard'>
+
+
+							<div class='row '>
+								<div class='col'>
+									<p class="formp centerme"><b>Profile</b> </p>
+									<p>Profile Ranking System: unlocks larger transaction size</p>
+
+									<hr>
+									<img id="profile-pic" class='centerme' src='assets/images/user.svg' onclick='uploadImage()' style="width:152px;height:152px;"/>
+
+								</div>
+							</div>
+
+
+							<hr>
+
+
+							<div class='row '>
+								<div class='col-3'>
+									<img class='profile-e-check' id='profile-e-check' src="assets/images/cross.svg" style="width:28px;height:28px;" />
+								</div>
+
+								<div class='col-9 '>
+										<p class='subp leftme' >Email</p>
+								</div>
+
+							</div>
+
+
+							<div class='row '>
+								<div class = 'col'>
+									<input type="email" id='profile-email' value=''/>
+								</div>
+							</div>
+
+							<div class='row ' id='send-e-verification'>
+								<div class='col-2'>
+								</div>
+								<div class='col-8'>
+										<button class='centerme ' id='send-email-link' onclick="sendVerificationEmail()">VERIFY</button>
+								</div>
+								<div class='col-2'>
+								</div>
+							</div>
+
+
+							<hr>
+
+
+							<div class='row '>
+								<div class='col-3'>
+									<img id='profile-name-check' src="assets/images/cross.svg" style="width:28px;height:28px;" />
+								</div>
+								<div class='col-9'>
+									<div class='row '>
+										<p class='subp' >Full Name/Username</p>
+									</div>
+								</div>
+							</div>
+
+							<div class='row '>
+									<input type="text" placeholder="Name"  id='profile-name'/>
+							</div>
+							<div class='row '>
+									<button class='centerme profile-button btn-block' id='send-email-link' onclick="updateName()">Update</button>
+							</div>
+
+
+
+
+								<hr>
+
+<!--
+
+							<div class='row '>
+								<div class='col-3'>
+									<img id='profile-live-check' src="assets/images/cross.svg" style="width:28px;height:28px;" />
+								</div>
+
+								<div class='col-9  '>
+									<div class='row '>
+										<p class='subp leftme'>Live Image Verification</p>
+									</div>
+								</div>
+							</div>
+
+							<div class='row '>
+								<div class='col'>
+									<div class='row'>
+										<div  class='col'>
+											<input type="file" class='file-select' name="kyc" accept="image/*">
+										</div>
+									</div>
+
+									<div class='row'>
+										<div class='col'>
+
+											<button class='file-submit' type='submit'>SUBMIT</button>
+
+										</div>
+									</div>
+									<br>
+									<div class='row'>
+										<p class='centerme'><em>Read these instructions before submiting</em></p>
+									</div>
+
+									<br>
+									<div class='row'  id='kyc-notice'>
+									</div>
+								</div>
+
+							</div>
+			 -->
+
+
+						<div class='row '>
+
+								<div class='col-3'>
+									<img id='profile-phone-check' src="assets/images/cross.svg" style="width:28px;height:28px;" />
+								</div>
+
+								<div class='col-9'>
+									<div class='row '>
+											<p class='subp leftme'>Phone Verification</p>
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class='row '>
+								<input class = 'leftme' type="text" id='profile-phone'/>
+							</div>
+							<div class='row'>
+								<button class='centerme profile-button btn-block' id='send-email-link' onclick="updatePhone()">Update</button>
+							</div>
+							<div class='row' id='phone-submit-notice'>
+
+							</div>
+
+
+							<hr>
+
+
+							<div class='row '>
+
+								<div class='col-3'>
+									<img id='profile-veridium-check' src="assets/images/cross.svg" style="width:28px;height:28px;" />
+
+								</div>
+
+								<div class='col-9'>
+									<div class='row'>
+										<p class='subp leftme'>VeridiumID</p>
+									</div>
+								</div>
+							</div>
+
+							<div class='row '>
+								<div class='col-3'>
+									<a href="https://www.veridiumid.com">
+										<img class='veridium-img2' src="assets/images/veridium.jpg" style="width:42px;height:42px;" />
+									</a>
+								</div>
+								<div class='col-9'>
+									<div class='row '>
+										<p class='leftme'><em>How to set up VeridiumID?</em></p>
+									</div>
+								</div>
+							</div>
+
+
+							<hr>
+
+
+
+
+
+							<hr>
+
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- /PROFILE CARD N  SHIT-->
+
+		<!-- ENGINE -->
+		<div class='col-lg-6 col-md-6 col-sm-12 '>
+			<!-- <div class="lecard"> -->
+				<div class="container calc" id='calculator'>
+
+					<div class='row '>
+						<div class="btn-group btn-group-toggle" data-toggle="buttons" >
+							<!-- <div class='' onclick="helpMeStack()"> -->
+							<label class="btn btn-secondary active" onclick="helpMeStack()" >
+								<input type="radio" name="stack" id="stack-sats" autocomplete="off"  checked> Stack
+							</label>
+							<!-- </div> -->
+							<label class="btn btn-secondary" onclick="helpMeLearn()">
+								<input type="radio" name='learn' id="learn-sats" autocomplete="off" > Learn
+							</label>
+							<label class="btn btn-secondary" onclick="helpMeSpend()">
+								<input type="radio" name="spend" id="spend-sats" autocomplete="off">  Spend
+							</label>
+						</div>
+
+					</div>
+
+
+					<div class='container-fluid-fluid stack ' id='satstacker'>
+
+						<div class='container-fluid-fluid' id='satstacker_calc'>
+							<br>
+							<p><em>Exchange Engine Under Construction</em></p>
+							<p><em>Currently Using Kraken API</em></p>
+							<a href="https://kraken.com">
+								<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPsAAADJCAMAAADSHrQyAAAAkFBMVEVYQdj///9QNteqoelWPthqV9tLL9ZKLdbh3vfX0/VSOddUPNdHKdVNMtZRONdPNddEJdX49/2VieTw7vtbRdm5su3s6vrPyvKLfuKbkOaimOduXNx9bt96at+EduGUiOTGwPBmUttnU9thTNqtperl4vjDve91ZN6elObV0fTc2faJe+K3r+y+t+6EdeF3Zt60DlcRAAAJkUlEQVR4nO2da4OqIBCGyUhKILX7Zbutttu229n//++O1laaAmNpF+X9bMqTM8OAMKDaXeUOWst+fTya/zZWvR5CqOetpr/zxdjvL1sD976NQfd60Hrpj6acEZPbbYtSjNFRGFNqGTY3CbOnC3+4vleT7sHe3HUajHDDokglbBmcsEZn17xDuwpmd7/qn4RwCyup4/8AJ+as3iq2bYWyN/1fYhrZsM+ihkl+/SLff2Hsww4lhtrIFfw2QeNhUU0shn044mZGOxcJWyYfFYNfAPt2YZtWLtxHWabd2ebf0LzZu36P5Av+h088P+/uP1/21pzZ+Zh6Uthm3/lG/jzZdx65NbjJZZHVR47tzY3d9du8qFd+Fubt/Ew/J3Z3wuzCwQ+yST0n+lzY3Qkx7kQeyjDzoc+DvW7ekzyUbfo5tPt29p11L2uPitPdw9m/PLP4CJcmbL7f2uPdxt79xx5DHoqyefdx7D4rIoWDy2I/D2Jvevyh5KH46oZB7vXsY+dx5n4WdTZ3Z9+iR0T3NNm9a1/9leyTp3jpB2Gnfkf2buPxnh4Vn14V8K9hXxY8XMsuSpb3YV+wR6OmiHXuwN5t3Dt5h8meZh7fZGVv8Wez96OonXVKLyP7zwNzWJWw0y+SvUMeDSgVGxfHPnuuri0p/lYQu7tqP5pNKeM9Q8SDsw/Qs0a5qCiCpzlg9rX9CujhTO4gb/bmEwf4uDCBjm2A7FvyKugBPAPCw9hbL4QewsOyHBD7K731UEB4CHvzxdChPg9gX78cejiDDYj2avZB+/XQA3hD3c8r2V30iugBfE+Z4SnZV6+R0iRF329lnz1/Di+SoRrYKNg7zz5yk4krhrRy9p9nnJqDi8knM6TsLefRrb9RjjTHkbF3C1szdS9hWxbsZeyNVw3xZ9HpdeyL55yMziZbMm8vZl++dpw7iom/2AjZu889JQsXESa3QvYSOPtBtJGVffLKSU1cfJKNffvqPXtUol5ewP6ig7d04V4W9nEZurezjPTEPpW9VBYfKt3qU9m9Mll8KOxB2evlifFH8bTlSCnsg3IkdHGxlAwnhX1WlqwmKpoyiZNkH5YlmY2LJffYJdl7ZQt0B6V08gl2v3yB7iCeWHN9ye6aj25jYeKXcziX7JtyZXRRGZcrri/Yu2Xs34667Ocu2Duv+ylCrfZCxl7KtOYsNpCwLx67/6VoWQsxe6m9PZTTFbKX2ttDtccidrfsrz3weFfAXi9v336UURewP8vOpyLF09l3Zc3ko+K7VPZVOQdwceFVGvu2nOP2S0WWHZ7ZR+XOa46K5Dcn9gp0cAedu7kTe78KUT4U7yfY36sQ6UKdv8se2ddVMfnA6NcX7JPy53RHGZML9pLOzqbpNGOLKtW5H0S2MfZJ2UevUbUnMfYKmfzZ6A/szSqZfGD06wi7X50oH8rwI+zTKpn8aaXpnr30c5SXOnyl2LMvqzBrERVfnthLPi2f1GEgiyrXw4U69HIhe8m/RKVp/3UqZP+omrsHDv/xx96pmrsHDt/5Y6/EBG1c++laVKGZuqjCWbuA/au8S2zEMr/27D9VmaWMyvb37BWZmI/LGu3ZS7dqGqJwZXXAXsVQh5ATslds3uIo0gzYKzeIOygYyqHsqy0wtdpWDqeI7O9Dc7iPdc19jHrAni3MU87QbDHujBqcXH1sDgqPDiHevDPuzD1yy6Ek2CC8MeqMF2+IZKuoGAR6VJtm+InFZrvTMq3thF57yoJtLobHz6HucGRemWFgE9dPn9O7u1mW8th0GrDD3R2z0UXVmI/eNcHC4hfnBrj+Ve+eexf7fNffGSqO8RqCZ/OGl1IsqJ69vhmZJzfku/PMvQ1mKWcPbD1w9GIuGkAfao6SjwqflrX0j6CiZj9jmkFpetmmb+johAxQC3gtEdX77mbbP8q+BPf5ygRPhaV7NsCXabbQEOaxknopbpb+zhGhB/AZdmNiJC5kMQYSDVEf5CCWrE5OhnULRHZQwA/c55msVNcMFDiNPoJ9jmpLi0P9QH0sbZdaRG/Q7pZIDxlxQV2m4aMN5E9SlfmGFklg8vpa0D4Hf8qb8wExIGuDFoBmi8sm/KkFs1ZDVSQfuPJFWZYQ8i7oAn0DLjOV1d1hL17x2qEvnipee622BDgh/UaQ3a+W6lmwKX4rPUOICjS44OpC+4BlJPQNAT4/W+q69i6kf+LqYx+HkKjJlLeBfHLAU/QOaDPgQAPIF3ylycOMns7UzYFMSrwjD9BmQN3LjdrKsLKQYKCG+j9URsxAkEzdQz31RVz9LMjGA4C7gxweYoaQ0SmAXFAs4kKA1LgNOQEIsNjNFKfFZ+U0+YxVvXsowJAIYquQGTQCKToM8B2Ino4dUnNYs98sza7ZNbtm1+yaXbPLpdk1u2bX7Jpds2t2uTS7Ztfsml2za3bNfrs0u2bX7Jpds2t2zS6XZtfsml2za3bNrtnl0uyaXbNrds2u2TX77dLsml2za3bNrtk1u1ya/ZnY1bsD8RTwLEDx/mdj7yH1RZC9t7W1mt1OL+4S105dr4EAtucCDnbGDTRXXgTYAg7aBA7YAg7aBO4AbgPYBE7nqK7cgAp6X4C6zpDt1IAaydHTsMRSHxXUrgPq24D8S13PG6cdNZ+UslJQW1xpJyJ1RUI+REpjBbZZWWIC5Dq12lhlhybEdQD/oVNDNZXDn46iUUhlP8riJAdtVUbfhjVHVTKFzgP2luJhlycJi6Q4SVpZJ+YoRckUG9JT1tSBg7XCOqWf0oe1YaYaRHq5h6WcPZ+uofw+idO8RVpInSesExOwr6UeD35WzZd5vAVJEg6Sds0E1OmEkp/mHh6oFQayuuQqBiku8SdZ9UcT6DmBupLmWMqyPmctJVZvhp6zD+JvQlc1QR3KsdHiMn4O1OJDDYWGiCnYCgN1hOHX2NcU+ztfRgDP5xkeFXiPKYB3pHXHEtoJ4KkNSY/O+ieANyLnywQ+lnoVW0hunKa1lZbhYOcj430+nLQ/0ULZ0IN4lxo3+V/sOZ2dl3waZeC4cpL7mXyajUGJYUxNlMhJMZllMfiDflgiBmHn8uy8WrNBYpdZ7C3rv7zXjseL1hoOpKxNUhsn1kdh3s5qPHsNZnF6ShqnHCuSsA5/HW7tL6Rtzr5haViKfnrM3pewxNQgfAMP8HF1N5wY+1LL2DKYl90G/7SdO/wQhKnFnd9I0I0l693l5s1DaPVvMsxuXhGt+4tPD/WmI791y21qLX/U6CHvs9Nfqy8Wyx1O/q0Q8t7Gy9iL+A+oTqeKeRXHvAAAAABJRU5ErkJggg==" class='centerme' style="width:69px;height:55px;" />
+							</a>
+							<br>
+
+							<form class="stack-form-calc" id="calc-form" style="font-size:25px;">
+							<div class='row'>
+								<div class='col-9 '>
+									<input type="text" placeholder="Buy Amount"  id='euro-value' style="font-size:31px;"/>
+								</div>
+								<div class='col-3 '>
+									<input type="text" readonly value="EUR"  id='euro-title' style="font-size:21px;" />
+								</div>
+							</div>
+
+							<br>
+
+							<div class='row '>
+								<div class='col-9 '>
+									<input type="text" placeholder="Buy Amount"  id='btc-value' style="font-size:31px;" />
+								</div>
+								<div class='col-3 '>
+									<input type="text" readonly value="BTC"  id='btc-title' style="font-size:21px;" />
+								</div>
+							</div>
+
+							<br>
+
+							<div class='row '>
+								<div class='col'>
+									<input type="text" placeholder="Wallet Address"  id='user-address' style="font-size:21px;" />
+								</div>
+							</div>
+
+							<br>
+
+			
+									<button class='go-stack' type='submit'>STACK</button>
+
+										<!-- <img class='centerme' src='assets/images/upload_photo.svg' onclick='initUploadPhoto()' style="width:49px;height:49px;"/> -->
+							<hr>
+
+
+
+									<img class='centerme' src="assets/images/bitcoin.svg" style="width:100px;height:100px;">
+
+
+						
+							</form>
+						</div>
+						<br>
+
+						<div class='container-fluid-fluid hide' id='satstacker_pay'>
+							<!-- BRING ON YOUR PAYMENT PROVIDER-->
+							<!-- SECURE MESSAGE SAFETY NOTICE-->
+
+							<!-- TYPE -->
+							<div class='row '>
+									<div class="btn-group btn-group-toggle" data-toggle="buttons" >
+										<!-- <div class='' onclick="helpMeStack()"> -->
+										<label class="btn btn-secondary active" onclick="cc()" >
+											<input type="radio" name="cc" id="cc-block-sats" autocomplete="off"  checked> Credit Card
+										</label>
+										<!-- </div> -->
+										<label class="btn btn-secondary" onclick="sepa()">
+											<input type="radio" name='sepa' id="sepa-block" autocomplete="off" > SEPA
+										</label>
+									</div>
+
+							</div>
+
+							<br>
+
+							<div id='cc-payment'>
+								<form class="container-fluid-fluid stack-form-pay" id="cc-payment-form" >
+										<div class='row '>
+												<!-- LOCK -->
+												<div class='col-2 leftme'>
+													<img src="assets/images/lock.png" style="width:35px;height:32px;" />
+												</div>
+												<!-- MSG -->
+												<div class='col-10 leftme'>
+													<p style="font-size:14px;">Secured by Cloudflare. Under SSL message transport.</p>
+												</div>
+											</div>
+							<!-- CARD NUMBER -->
+							<hr>
+								<div class='row'>
+
+										<div class='col '>
+											<img src="assets/images/mastercard.svg" style="width:65px;height:50px;">
+										</div>
+										<div class='col '>
+											<img src="assets/images/visa.svg" style="width:65px;height:50px;">
+										</div>
+									
+								</div>
+								<br>
+
+								<div class='row '>
+									<div class='col '>
+										<input type="text" placeholder="Credit Card Number" id='cc-number' style="font-size:17px;" />
+									</div>
+								</div>
+							<br>
+								<!-- EXP+CVV -->
+								<div class='row '>
+									<!--EXP-->
+									<div class='col '>
+										<input type="text" placeholder="Expiry Date" id='cc-expiry' style="font-size:17px;" />
+									</div>
+									<!--CVV-->
+									<div class='col '>
+										<input type="text" placeholder="CVV" id='cc-cvv'/>
+									</div>
+								</div>
+							<br>
+								<!--FULL NAME-->
+								<div class='row '>
+									<div class='col '>
+										<input type="text" placeholder="Full Name" id='cc-fullname' style="font-size:17px;" />
+									</div>
+								</div>
+							<br>
+							<!--FULL NAME-->
+							<div class='row '>
+								<div class='col '>
+									<input type="text" placeholder="Amount" id='cc-amount' style="font-size:17px;" />
+								</div>
+							</div>
+							<br>
+								<!--FINOTICE-->
+								<div class='row '>
+										<div class='col '>
+											<p>Payment will be initiated following Veridium Authentication.</p>
+										</div>
+								</div>
+							<br>
+								<!--BUTTON-->
+								<div class='row '>
+									<button class='go-pay' type='submit'><img class='centerme veridium-img3' src="assets/images/veridium.jpg" style="width:59px;height:59px;" />
+									</button>
+								</div>
+							
+								<div class='row'>
+
+								</div>
+
+								</form>
+
+
+							<!-- CC PAYMENT SECTION-->
+							</div>
+
+							<div id='sepa-payment' class='hide'>
+								<form class="stack-form-pay" id="sepa-payment-form" >
+
+								<!-- Account Holder Name -->
+								<div class='row '>
+									<div class='col '>
+										<input type="text" value="Account Holder Name: Sats.cc" id='acc-name'/ style="font-size:21px;" readonly>
+									</div>
+								</div>
+
+								<!-- Bank -->
+								<div class='row '>
+									<!--EXP-->
+									<div class='col '>
+											<input type="text" value="Bank Name: UBS" id='acc-bankname-cvv' style="font-size:21px;" readonly/>
+									</div>
+
+									<!--CVV-->
+
+
+								</div>
+
+								<!--Account Number-->
+								<div class='row '>
+									<div class='col '>
+										<input type="text" value="Account Number: 007432528747356" id='acc-number' style="font-size:21px;" readonly/>
+									</div>
+								</div>
+								<br>
+								<!--FINOTICE-->
+								<div class='row '>
+										<div class='col'>
+											<p>Make a SEPA Payment to the above bank details with your email as a note. We will process your order as  soon as we recieve funds into this account.</p>
+										</div>
+								</div>
+
+								<!--BUTTON-->
+
+								<br>
+
+								<div class='row'>
+
+										<div class='col '>
+											<img src="assets/images/sepa.png" style="width:89px;height:62px;">
+										</div>
+
+								</div>
+
+								</form>
+
+							<!-- SEPA PAYMENT SECTION-->
+							</div>
+							
+						<!--/#satstacker_pay-->
+						</div>
+						<br>
+						<br>
+					<!--/#satstacker-->
+					</div>
+
+					<div class='container learn' id='satlearner'>
+						<h1> Learn </h1>
+					</div>
+
+					<div class='container spend' id='satspender'>
+						<h1> Spend </h1>
+					</div>
+
+
+				</div>
+		</div>
+			<!-- </div> -->
+		<!-- ENGINE -->
+
+	</div>
+</div>
+<!-- </div> -->
+
+
+<div class="end-line"></div>
+
+<!--===============================================================================================-->
+
+<!-- <script src="vendor/jquery/jquery-3.2.1.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bs-stepper/dist/js/bs-stepper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+<!--===============================================================================================-->
+
+<!--===============================================================================================-->
+
+<script src="assets/js/script.js"></script>
+<script src="assets/js/auth.js"></script>
+
+</body>
+
+
+<hr>
+<hr>
+<footer class='footer centerme'>
+	<div class=row>
+		<div class='col'>
+		<h3 class='formp'>Business</h3>
+		<a href="about.html">About Us
+		</a>
+		<br>	
+		<a href="bounties.html"> Bounties
+		</a>
+		<br>
+		<a href="careers.html">Careers
+		</a>
+		<br>    
+		<a href="contact.html">Contact
+		</a>
+		<br>
+	
+		</div>
+		<div class='col'>
+		<h3 class='formp'>Legal</h3>
+	
+		<a href="terms.html">Terms of Service
+		</a>
+		<br>
+	
+		<a href="privacy.html">Privacy Policy
+		</a>
+		<br>
+	
+		<a href="kyc.html"><p>AML/Compliance</p>
+		</a>
+		<br>
+	
+	</div>
+	<br>
+</footer>
+
+	<p class='centerme'>Sats.cc © 2019 Matrix Services OÜ. All Rights Reserved. </p>
+	<br>
+</html>
+<!--===============================================================================================-->

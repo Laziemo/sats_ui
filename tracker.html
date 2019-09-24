@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Sats Tracker</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<!-- <meta name="google-site-verification" content="g7mlCW15-4FTz3tfUYCmjpjCePgz-KLXCwCE6hBQ-gQ" /> -->
+    <!--===============================================================================================-->
+	<!-- <link rel='reference' hreflang='en' href='https://sats-add64.firebaseapp.com' /> -->
+	<!--===============================================================================================-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bs-stepper/dist/css/bs-stepper.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/explorer.svg" />
+
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="assets/css/tracker_styles.css">
+    <!--===============================================================================================-->
+    <!-- <script  src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script> -->
+
+    <!-- Add Firebase products that you want to use -->
+    <!-- <script  src="https://www.gstatic.com/firebasejs/6.5.0/firebase-auth.js"></script>
+  	<script  src="https://www.gstatic.com/firebasejs/6.5.0/firebase-storage.js"></script>
+  	<script  src="https://www.gstatic.com/firebasejs/6.5.0/firebase-database.js"></script>
+  	<script  src="https://www.gstatic.com/firebasejs/6.5.0/firebase-firestore.js"></script>
+
+
+
+  	<script >
+
+  		const firebaseConfig = {
+  			apiKey: "AIzaSyCEdl_C9xfmuSMFYEVn6EVf1K4SaCnKgNk",
+  			authDomain: "sats-add64.firebaseapp.com",
+  			databaseURL: "https://sats-add64.firebaseio.com",
+  			projectId: "sats-add64",
+  			messagingSenderId: "883589618606",
+  			storageBucket: 'gs://sats-add64.appspot.com/',
+  			appId: "1:883589618606:web:02c57f78c0d49ef0"
+  		};
+  		// Initialize Firebase
+  		firebase.initializeApp(firebaseConfig);
+  		// var db = firebase.firestore();
+
+  		// //THE FOLLOWING SHOULD BE ON EVERYPAGE
+  		// /*For each of your app's pages that need information about the signed-in user,
+  		// attach an observer to the global authentication object.
+  		// This observer gets called whenever the user's sign-in state changes.*/
+  		// firebase.auth().onAuthStateChanged(function(user) {
+  		// 	if (user) {
+  		// 		// User is signed in.
+  		// 		console.log("USER DETAILS: ",user);
+
+  		// 		$('#logout').show();
+  		// 		$('#logout').addClass('unhide');
+
+  		// 		$('#profilecard').show();
+  		// 		$('#entrycard').hide();
+
+  		// 		const displayName = user.displayName;
+  		// 		const email = user.email;
+  		// 		const emailVerified = user.emailVerified;
+  		// 		const photoURL = user.photoURL;
+  		// 		const isAnonymous = user.isAnonymous;
+  		// 		const uid = user.uid;
+  		// 		const providerData = user.providerData;
+  		// 		// ...
+  		// 	} else {
+  		// 		// User is signed out.
+  		// 		// ...
+  		// 		$('#logout').hide()
+  		// 		$('#profilecard').hide()
+  		// 		$('#entrycard').show()
+
+  		// 	}
+  		// });
+
+  	</script> -->
+
+    <!-- update the version number as needed -->
+    <!-- <script defer src="/__/firebase/6.5.0/firebase-app.js"></script>
+
+
+    <script defer src="/__/firebase/6.5.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/6.5.0/firebase-database.js"></script> -->
+    <!-- <script defer src="/__/firebase/6.5.0/firebase-messaging.js"></script> -->
+    <!-- <script defer src="/__/firebase/6.5.0/firebase-storage.js"></script> -->
+    <!-- initialize the SDK after all desired features are loaded -->
+    <!-- <script defer src="/__/firebase/init.js"></script> -->
+    <!--===============================================================================================-->
+
+<!--===============================================================================================-->
+
+  </head>
+<!--===============================================================================================-->
+
+<body>
+<br>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+      <a class="navbar-brand sats-ico" href="index.html">
+            <img class="sats-ico d-inline-block align-top" src='assets/images/saturn0.svg'>SatsTracker <span style='font-size: 14px;color: #37c0f7'>Prototype</span>
+          </a>
+      </div>
+    </div>
+  
+    </nav>
+
+	<!-- <button class="centerme" id="logout">Logout</button> -->
+
+
+<br>
+
+
+
+
+
+    <div class="container outline">
+     
+        <div class='row centerish outline'>
+                <h1 class="centerish outline">Bitcoin Testnet</h1>
+        </div>
+
+        <div class="row centerish outline">
+                <input id="bitinput"  name='bitinput' type="text" style='background:transparent; color:#f7f7f2;' class="form centerish" placeholder="Enter block height or transaction hash." />
+              <br>
+        </div>
+
+
+        <div class="row centerish outline">
+            <button class="btn outline centerish" type="submit" onclick='search()'>
+                Search
+            </button>
+        </div>
+
+    </div>
+  
+
+    <div class='container block-data'>
+
+      <div class='row centerish outline'>
+              <h2 class="centerish outline">Block Data</h2>
+      </div>
+
+
+      <div class = "row centerish outline">
+
+        <div class = "col-sm-6 col-md-4 col-lg-2 outline">
+          <div class='row labelo' name="Confirmations">
+            <h5>Confirmations</h5>
+          </div>
+          <div class='row output-lg outline' id='confirmations'>
+              12
+          </div>
+        </div>
+        <div class = "col-sm-6 col-md-4 col-lg-2 outline">
+          <div class='row labelo' name="Block height" >
+            <h5>Block Height</h5>
+          </div>
+          <div class='row output-lg outline' id='block_height' >
+              594,740
+          </div>
+        </div>
+
+
+        <div class = "col-sm-6 col-md-4 col-lg-2 outline">
+          <div class='row labelo' name="Weight">
+            <h5>Block Weight (kWU)</h5>
+          </div>
+          <div class='row output-lg outline' id="block_weight">
+            3992.939 
+          </div>
+        </div>
+
+        <div class = "col-sm-6 col-md-4 col-lg-2 outline">
+          <div class='row labelo' name="nTx">
+            <h5>nTxs</h5>
+          </div>
+          <div class='row output-lg outline' id="nTx">
+              2720
+          </div>
+        </div>
+
+        <div class = "col-sm-6 col-md-4 col-lg-2 outline">
+          <div class='row labelo' name="Size">
+            <h5>Size (vB)</h5>
+          </div>
+          <div class='row output-lg outline' id="size">
+              999
+          </div>
+        </div>
+
+      
+
+      </div>
+
+<br>
+<hr>
+
+      <div class='bitnet'>
+        <img class='bitnet' src='assets/images/bitcoin-network.svg' />
+      </div>
+
+      <div class="row">
+
+        <div class = "col-sm-12 col-md-4 col-lg-4 outline">
+            <div class='row labelo' name="Median Time">
+              <h5>Time (GMT+5:30)</h5>
+            </div>
+            <div class='row output outline' id="median_time">
+                9/14/2019, 4:54:32 AM
+            </div>
+        </div>
+        <div class = "col-sm-12 col-md-4 col-lg-4 outline">
+          <div class='row labelo' name="Average Fees">
+            <h5>Average Fee (sats/vB)</h5>
+          </div>
+          <div class='row output outline' id="avg_fees">  
+            23
+          </div>
+        </div>
+  
+        <div class = "col-sm-12 col-md-4 col-lg-4 outline">
+          <div class='row labelo' name="Difficulty">
+            <h5>Difficulty</h5>
+          </div>
+          <div class='row output outline' name="difficulty">
+              11756551916.90395200
+          </div>
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class = "col-sm-12 col-md-12 col-lg-12 outline">
+          <div class='row labelo' name="TxHash">
+            <h5>Block Hash</h5>
+          </div>
+          <div class='row output-sm outline' id="tx_hash">
+              00000000000000000004ea3bd867a37fff21965d95cf2c839fb2f4557eb33d14
+          </div>
+        </div>
+
+        <div class = "col-sm-12 col-md-12 col-lg-12 outline">
+          <div class='row labelo' name="Merkle Root">
+            <h5>Merkle Root</h5>
+          </div>
+          <div class='row output-sm outline' id="merkle_root">
+            b144b39759d4669cb92ca8b9084d68d1f05f1e28e16887bf062f37e3b5f79fd2
+          </div>
+        </div>
+
+
+      </div>
+
+
+
+      <div class="row outline">
+        
+       
+      </div>
+
+      <div class="row">
+        <div class = "col-sm-12 col-md-12 col-lg-2 outline">
+          <div class='row labelo' name="Previous Blockhash">
+            <h5>Previous Block Hash</h5>
+          </div>
+          <div class='row output-sm outline limit' name="prev_block_hash">
+            00000000000000000011231eeba12868031208881d841c759bc7cb6ddf252de9
+          </div>
+        </div>
+
+      </div>
+
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <hr>
+
+
+    </div>
+
+    <br>
+    <div class='container tx-data'>
+
+      <div class='row centerish outline'>
+              <h2 class="centerish">Transaction Data</h2>
+      </div>
+
+      <div id='scroll_block_txs'>
+        <!-- Insert two buttons here to scroll between which tx is displayed in the tx_breakdown section-->
+      </div>
+
+      <div id='tx_breakdown' class='container'>
+
+      <hr />  
+
+      <div class="row centerme outline">
+      
+        <div class="col centerme outline">
+          <div class="row centerme labelo">
+            Txid
+          </div>
+          <div class ="row centerme output-lg outline limit" id="txid_select">
+              e13b49876cb13f0d3ced67598b122efc7b4b902e82481abe2b8b06bd9bd6a315
+          </div>
+        <hr />
+        </div>
+
+      </div>
+      
+      <div class="row outline">
+
+        <div class="col outline">
+          <div class="row labelo">vIN
+          </div> 
+            <div class="row output-sm outline" id="vin">
+              <div class='col-sm-12 col-md-12 col-lg-8'>
+                #0 26poEtiQDEqEKzsYiDdeQXUHP6PHTMQMSo
+              </div>
+              <div class='col-sm-12 col-md-12 col-lg-4 output-amounts'>
+                  0.15381237 <span style='font-size:15px;color:#fac15c;'>BTC</span>
+              </div>
+
+            </div>       
+          </div>
+
+          <div class="col outline">
+            <div class="row labelo">vOUT
+            </div>
+
+            <div class="row output-sm outline" id="vout">
+
+
+              <div class='col-sm-12 col-md-12 col-lg-8'>
+
+                #0 26poEtiQDEqEKzsYiDdeQXUHP6PHTMQMSo <br>
+
+              </div>
+              <div class='col-sm-12 col-md-12 col-lg-4 output-amounts'>
+                  0.10281237 <span style='font-size:15px;color:#fac15c;'>BTC</span> <br>
+
+              </div>
+
+              <div class='col-sm-12 col-md-12 col-lg-8 output-sm'>
+
+                  #1 26poEtiQDEqEKzsYiDdeQXUHP6PHTMQMSo <br>
+  
+                </div>
+
+              <div class='col-sm-12 col-md-12 col-lg-4 output-amounts'>
+                  0.05100000 <span style='font-size:15px;color:#fac15c;'>BTC</span> <br>
+              </div>
+
+
+            </div> 
+          </div>
+
+      </div>
+
+      <hr />
+
+      <div class='row outline'>
+
+      </div>
+
+    </div>
+
+    </div>
+
+<!--===============================================================================================-->
+
+<!-- <script src="vendor/jquery/jquery-3.2.1.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bs-stepper/dist/js/bs-stepper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+<!--===============================================================================================-->
+
+<!--===============================================================================================-->
+
+<script src="assets/js/explorer.js"></script>
+
+<!-- <script src="assets/js/auth.js"></script> -->
+
+</body>
+
+
+<hr>
+<hr>
+<footer class='footer centerme'>
+	<div class=row>
+		<div class='col'>
+		<h3 class='formp'>Business</h3>
+		<a href="about.html">About Us
+		</a>
+		<br>
+		<a href="bounties.html"> Bounties
+		</a>
+		<br>
+		<a href="contact.html">Contact
+		</a>
+		<br>
+
+		</div>
+		<div class='col'>
+		<h3 class='formp'>Legal</h3>
+
+		<a href="terms.html">Terms of Service
+		</a>
+		<br>
+
+		<a href="privacy.html">Privacy Policy
+		</a>
+		<br>
+
+		<a href="kyc.html"><p>AML/Compliance</p>
+		</a>
+		<br>
+
+	</div>
+	<br>
+</footer>
+
+	<p class='centerme'>Sats.cc © 2019 Matrix Network International B.V. All Rights Reserved. </p>
+  <p class='centerme' style="font-size: 13px;"><em>This epic background was designed @ svgbackgrounds.com & icons from flaticon.com/authors/freepik</em></p>
+
+  <br>
+<div class="end-line"></div>
+
+</html>
+<!--===============================================================================================-->
+

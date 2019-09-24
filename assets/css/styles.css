@@ -1,0 +1,685 @@
+@import url('https://fonts.googleapis.com/css?family=Rajdhani&display=swap');
+
+/*green: #5863f8 #9fd356-JUNEBUD ; blue:#3094FF 37c0f7ZIMA grey:e8e8e8 violet:6880FF zima:1EB4E9 */
+#calc-form{
+  background-color: #f2f2f2;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='152' height='152' viewBox='0 0 152 152'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='temple' fill='%2337c0f7' fill-opacity='0.06'%3E%3Cpath d='M152 150v2H0v-2h28v-8H8v-20H0v-2h8V80h42v20h20v42H30v8h90v-8H80v-42h20V80h42v40h8V30h-8v40h-42V50H80V8h40V0h2v8h20v20h8V0h2v150zm-2 0v-28h-8v20h-20v8h28zM82 30v18h18V30H82zm20 18h20v20h18V30h-20V10H82v18h20v20zm0 2v18h18V50h-18zm20-22h18V10h-18v18zm-54 92v-18H50v18h18zm-20-18H28V82H10v38h20v20h38v-18H48v-20zm0-2V82H30v18h18zm-20 22H10v18h18v-18zm54 0v18h38v-20h20V82h-18v20h-20v20H82zm18-20H82v18h18v-18zm2-2h18V82h-18v18zm20 40v-18h18v18h-18zM30 0h-2v8H8v20H0v2h8v40h42V50h20V8H30V0zm20 48h18V30H50v18zm18-20H48v20H28v20H10V30h20V10h38v18zM30 50h18v18H30V50zm-2-40H10v18h18V10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  font-size: 17px !important;
+}
+#satstacker{
+  background-color: #f2f2f2;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='152' height='152' viewBox='0 0 152 152'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='temple' fill='%2337c0f7' fill-opacity='0.06'%3E%3Cpath d='M152 150v2H0v-2h28v-8H8v-20H0v-2h8V80h42v20h20v42H30v8h90v-8H80v-42h20V80h42v40h8V30h-8v40h-42V50H80V8h40V0h2v8h20v20h8V0h2v150zm-2 0v-28h-8v20h-20v8h28zM82 30v18h18V30H82zm20 18h20v20h18V30h-20V10H82v18h20v20zm0 2v18h18V50h-18zm20-22h18V10h-18v18zm-54 92v-18H50v18h18zm-20-18H28V82H10v38h20v20h38v-18H48v-20zm0-2V82H30v18h18zm-20 22H10v18h18v-18zm54 0v18h38v-20h20V82h-18v20h-20v20H82zm18-20H82v18h18v-18zm2-2h18V82h-18v18zm20 40v-18h18v18h-18zM30 0h-2v8H8v20H0v2h8v40h42V50h20V8H30V0zm20 48h18V30H50v18zm18-20H48v20H28v20H10V30h20V10h38v18zM30 50h18v18H30V50zm-2-40H10v18h18V10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  font-size: 17px  !important;
+
+}
+#satlearner{
+  background-color: #f2f2f2;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='152' height='152' viewBox='0 0 152 152'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='temple' fill='%2337c0f7' fill-opacity='0.06'%3E%3Cpath d='M152 150v2H0v-2h28v-8H8v-20H0v-2h8V80h42v20h20v42H30v8h90v-8H80v-42h20V80h42v40h8V30h-8v40h-42V50H80V8h40V0h2v8h20v20h8V0h2v150zm-2 0v-28h-8v20h-20v8h28zM82 30v18h18V30H82zm20 18h20v20h18V30h-20V10H82v18h20v20zm0 2v18h18V50h-18zm20-22h18V10h-18v18zm-54 92v-18H50v18h18zm-20-18H28V82H10v38h20v20h38v-18H48v-20zm0-2V82H30v18h18zm-20 22H10v18h18v-18zm54 0v18h38v-20h20V82h-18v20h-20v20H82zm18-20H82v18h18v-18zm2-2h18V82h-18v18zm20 40v-18h18v18h-18zM30 0h-2v8H8v20H0v2h8v40h42V50h20V8H30V0zm20 48h18V30H50v18zm18-20H48v20H28v20H10V30h20V10h38v18zM30 50h18v18H30V50zm-2-40H10v18h18V10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  font-size: 17px  !important;
+
+}
+#satspender{
+  background-color: #f2f2f2;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='152' height='152' viewBox='0 0 152 152'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='temple' fill='%2337c0f7' fill-opacity='0.06'%3E%3Cpath d='M152 150v2H0v-2h28v-8H8v-20H0v-2h8V80h42v20h20v42H30v8h90v-8H80v-42h20V80h42v40h8V30h-8v40h-42V50H80V8h40V0h2v8h20v20h8V0h2v150zm-2 0v-28h-8v20h-20v8h28zM82 30v18h18V30H82zm20 18h20v20h18V30h-20V10H82v18h20v20zm0 2v18h18V50h-18zm20-22h18V10h-18v18zm-54 92v-18H50v18h18zm-20-18H28V82H10v38h20v20h38v-18H48v-20zm0-2V82H30v18h18zm-20 22H10v18h18v-18zm54 0v18h38v-20h20V82h-18v20h-20v20H82zm18-20H82v18h18v-18zm2-2h18V82h-18v18zm20 40v-18h18v18h-18zM30 0h-2v8H8v20H0v2h8v40h42V50h20V8H30V0zm20 48h18V30H50v18zm18-20H48v20H28v20H10V30h20V10h38v18zM30 50h18v18H30V50zm-2-40H10v18h18V10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  font-size: 17px  !important;
+
+}
+.nav{
+  display: block;
+  position: fixed;
+}
+.navbar-header {
+  color: #342e37;
+  border : none !important;
+}
+.sats-ico{ 
+  width: 49px;
+	height: 49px;
+	display: block;
+  margin-top: -6px;
+  margin-right: 15px;
+  margin-bottom: -29px;
+  color: #342e37;
+
+}
+
+.heads{
+	font-weight: bold;
+	color: #342e37;
+	display: block;
+}
+
+.entry-btn{
+  font-size: 29px;
+}
+
+.mainp{
+	color: #342e37 !important;
+	font-size: 21px;
+}
+.outline{
+  border:  1px #342e37 solid;
+}
+.outline_doub{
+  border:  1px #342e37 double;
+}
+.subp{
+	color: #342e37 !important;
+	font-size: 19px;
+}
+
+.formp{
+  font-size: 27px;
+}
+.lecard {
+  /* padding: 8% 0 0; */
+  margin: auto;
+  opacity: 0.9;
+
+	/* background-image: url("https://backgroundcheckall.com/wp-content/uploads/2017/12/plain-white-background-images-hd-7.jpg") !important; */
+	/* background-repeat: no-repeat; */
+}
+
+.partners{
+	  margin: auto;
+}
+/* .{
+	border: 1px solid #37c0f7;
+} */
+.footer{
+	background-color:transparent;
+  font-weight: bold;
+  font-size: 17px;
+
+}
+
+.form {
+	/* background-image: url("https://www.barraques.cat/pngfile/big/7-73040_normal-architecture.jpg") !important; */
+	/* background-size: cover; */
+  background-color: #f2f2f2;
+/* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='152' height='152' viewBox='0 0 152 152'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='temple' fill='%2337c0f7' fill-opacity='0.06'%3E%3Cpath d='M152 150v2H0v-2h28v-8H8v-20H0v-2h8V80h42v20h20v42H30v8h90v-8H80v-42h20V80h42v40h8V30h-8v40h-42V50H80V8h40V0h2v8h20v20h8V0h2v150zm-2 0v-28h-8v20h-20v8h28zM82 30v18h18V30H82zm20 18h20v20h18V30h-20V10H82v18h20v20zm0 2v18h18V50h-18zm20-22h18V10h-18v18zm-54 92v-18H50v18h18zm-20-18H28V82H10v38h20v20h38v-18H48v-20zm0-2V82H30v18h18zm-20 22H10v18h18v-18zm54 0v18h38v-20h20V82h-18v20h-20v20H82zm18-20H82v18h18v-18zm2-2h18V82h-18v18zm20 40v-18h18v18h-18zM30 0h-2v8H8v20H0v2h8v40h42V50h20V8H30V0zm20 48h18V30H50v18zm18-20H48v20H28v20H10V30h20V10h38v18zM30 50h18v18H30V50zm-2-40H10v18h18V10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); */
+
+position: relative;
+  z-index: 1;
+  max-width: 420px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.2);
+  border-radius: 0px;
+  outline:none !important;
+
+
+}
+
+.form .stack-form-pay{
+  box-shadow: none;
+  border-radius: 0px;
+
+
+
+}
+
+
+.form input {
+  font-family: "Rajdhani", sans-serif;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 17px;
+  border-radius: 0px;
+
+  outline:none !important;
+
+}
+
+.form button {
+  font-family: "Rajdhani", sans-serif;
+  text-transform: uppercase;
+  background: #f2f2f2;
+  width: 100%;
+  border: 1px solid #37c0f7;
+  padding: 15px;
+  color: #342e37;
+  font-size: 19px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 0px;
+
+  outline:none !important;
+
+}
+
+.add-cc-form {
+	/* background-image: url("https://www.barraques.cat/pngfile/big/7-73040_normal-architecture.jpg") !important; */
+	/* background-size: cover; */
+  background-color: transparent;
+/* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='152' height='152' viewBox='0 0 152 152'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='temple' fill='%2337c0f7' fill-opacity='0.06'%3E%3Cpath d='M152 150v2H0v-2h28v-8H8v-20H0v-2h8V80h42v20h20v42H30v8h90v-8H80v-42h20V80h42v40h8V30h-8v40h-42V50H80V8h40V0h2v8h20v20h8V0h2v150zm-2 0v-28h-8v20h-20v8h28zM82 30v18h18V30H82zm20 18h20v20h18V30h-20V10H82v18h20v20zm0 2v18h18V50h-18zm20-22h18V10h-18v18zm-54 92v-18H50v18h18zm-20-18H28V82H10v38h20v20h38v-18H48v-20zm0-2V82H30v18h18zm-20 22H10v18h18v-18zm54 0v18h38v-20h20V82h-18v20h-20v20H82zm18-20H82v18h18v-18zm2-2h18V82h-18v18zm20 40v-18h18v18h-18zM30 0h-2v8H8v20H0v2h8v40h42V50h20V8H30V0zm20 48h18V30H50v18zm18-20H48v20H28v20H10V30h20V10h38v18zM30 50h18v18H30V50zm-2-40H10v18h18V10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); */
+
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+
+}
+
+
+.add-cc-form  input {
+  font-family: "Rajdhani", sans-serif;
+  background: transparent;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 17px;
+}
+
+.add-cc-form  button {
+  font-family: "Rajdhani", sans-serif;
+  text-transform: uppercase;
+  display: block;
+  justify-content: stretch;  
+
+  background: #37c0f7;
+  width: 100%;
+  border: 2px solid #37c0f7 ;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 19px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 0px;
+
+  outline:none !important;
+
+  
+
+}
+
+
+.kyc-form {
+	/* background-image: url("https://www.barraques.cat/pngfile/big/7-73040_normal-architecture.jpg") !important; */
+	/* background-size: cover; */
+  background-color: transparent;
+/* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='152' height='152' viewBox='0 0 152 152'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='temple' fill='%2337c0f7' fill-opacity='0.06'%3E%3Cpath d='M152 150v2H0v-2h28v-8H8v-20H0v-2h8V80h42v20h20v42H30v8h90v-8H80v-42h20V80h42v40h8V30h-8v40h-42V50H80V8h40V0h2v8h20v20h8V0h2v150zm-2 0v-28h-8v20h-20v8h28zM82 30v18h18V30H82zm20 18h20v20h18V30h-20V10H82v18h20v20zm0 2v18h18V50h-18zm20-22h18V10h-18v18zm-54 92v-18H50v18h18zm-20-18H28V82H10v38h20v20h38v-18H48v-20zm0-2V82H30v18h18zm-20 22H10v18h18v-18zm54 0v18h38v-20h20V82h-18v20h-20v20H82zm18-20H82v18h18v-18zm2-2h18V82h-18v18zm20 40v-18h18v18h-18zM30 0h-2v8H8v20H0v2h8v40h42V50h20V8H30V0zm20 48h18V30H50v18zm18-20H48v20H28v20H10V30h20V10h38v18zM30 50h18v18H30V50zm-2-40H10v18h18V10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); */
+
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: left;
+
+}
+
+
+.kyc-form  input {
+  font-family: "Rajdhani", sans-serif;
+  background: transparent;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 17px;
+}
+
+.kyc-form  button {
+  font-family: "Rajdhani", sans-serif;
+  text-transform: uppercase;
+  display: block;
+  justify-content: stretch;  
+
+  background: #37c0f7;
+  width: 100%;
+  border: 2px solid #37c0f7 ;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 19px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 0px;
+
+  outline:none !important;
+
+  
+
+}
+
+
+
+.btn{
+  font-size: 21px;
+  color: #37c0f7;
+  outline:none !important;
+
+
+
+}
+
+.btn-block{
+  width:100%;
+margin: 0 auto;
+border-radius: 0px;
+
+  display:block !important;
+  text-align:center;
+  background-color: #f2f2f2;
+  color: #37c0f7;
+
+
+}
+
+.btn-group {
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  width: 100%;
+  height: 61px;
+
+}
+
+.btn-primary{
+  background: #f2f2f2;
+  color: #342e37;
+  border: 1px solid #37c0f7 !important;
+  border:none;
+  border-radius:0px;
+  padding: 11px;
+  outline: none;
+  font-size: 17px;
+  width: 120px;
+
+
+}
+
+.btn:not(:disabled):not(.disabled){
+  flex: 1;
+  cursor: pointer;
+  margin: 0 auto;
+  padding-top: 14px;
+  border: none;
+  font-size: 21px;
+  background-color: transparent;
+  color: #343434;
+  /* border-radius: 0px; */
+
+}
+.btn.active{
+  border: none;
+  background: transparent !important;
+  color: #37c0f7 !important;
+  border-radius: 0px;
+
+
+}
+.btn-group-toggle input[type="radio"]:checked{
+  width:100%;
+  margin: 0 auto;
+  padding-right:0;
+  display:block !important;
+  text-align:center;
+  background: transparent !important;
+   color: #37c0f7;
+ 
+
+}
+
+.calc {
+	/* background-image: url("https://www.barraques.cat/pngfile/big/7-73040_normal-architecture.jpg") !important; */
+	/* background-size: cover; */
+
+  /* position: relative; */
+  /* z-index: 1; */
+  background-color: #f2f2f2;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='152' height='152' viewBox='0 0 152 152'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='temple' fill='%2337c0f7' fill-opacity='0.06'%3E%3Cpath d='M152 150v2H0v-2h28v-8H8v-20H0v-2h8V80h42v20h20v42H30v8h90v-8H80v-42h20V80h42v40h8V30h-8v40h-42V50H80V8h40V0h2v8h20v20h8V0h2v150zm-2 0v-28h-8v20h-20v8h28zM82 30v18h18V30H82zm20 18h20v20h18V30h-20V10H82v18h20v20zm0 2v18h18V50h-18zm20-22h18V10h-18v18zm-54 92v-18H50v18h18zm-20-18H28V82H10v38h20v20h38v-18H48v-20zm0-2V82H30v18h18zm-20 22H10v18h18v-18zm54 0v18h38v-20h20V82h-18v20h-20v20H82zm18-20H82v18h18v-18zm2-2h18V82h-18v18zm20 40v-18h18v18h-18zM30 0h-2v8H8v20H0v2h8v40h42V50h20V8H30V0zm20 48h18V30H50v18zm18-20H48v20H28v20H10V30h20V10h38v18zM30 50h18v18H30V50zm-2-40H10v18h18V10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  max-width: 420px;
+  margin: 0 auto 100px;
+  /* padding: 5px; */
+  text-align: center;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.2);
+  border-radius: 0px;
+  outline:none !important;
+
+
+}
+
+.calc input {
+  font-family: "Rajdhani", sans-serif;
+  background: transparent;
+  width: 100%;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  
+}
+
+.calc button {
+  font-family: "Rajdhani", sans-serif;
+  text-transform: uppercase;
+  background: #342e37;
+  width: 100%;
+  height: 100%;
+  display: block;
+  justify-content: stretch;
+  border: 0;
+  padding: 15px;
+  color: #37c0f7;
+  font-size: 19px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 0px;
+  outline:none !important;
+
+
+
+}
+
+.a-menu:hover {
+
+  text-decoration: none;
+}
+
+
+button:hover,.form button:active,.form button:focus {
+  background: #f2f2f2;
+  border: 1px solid #37c0f7;
+  color: #342e37;
+  border-radius: 0px;
+  outline:none !important;
+
+
+
+}
+/* .side-menu-main{
+  border-right: 1px solid #f2f2f2;
+} */
+.form button:hover,.form button:active,.form button:focus {
+  border: 1px solid #37c0f7;
+  background: #342e37;
+  color: #37c0f7;
+  border-radius: 0px;
+  outline:none !important;
+
+
+}
+
+/* .btn-group{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 100%;
+} */
+
+.sell-btn{
+  background: #342e37;
+  color: #37c0f7;
+}
+.form .sell-btn button:hover button:active,.form button:focus{
+  border: 3px solid #37c0f7;
+  background: #342e37;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #342e37;
+  font-size: 19px;
+}
+.form .message a {
+  color: #5863f8;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+
+ .stack-form-pay{
+  font-size: 21px !important;
+}
+/*
+.stack-form-calc{
+  font-size: 21px;
+} */
+/* */
+/* background-image: url("https://c.wallhere.com/photos/4e/a1/1920x1080_px_background_blue_lines_vector-1485391.jpg!d"); */
+/* background-image: url("http://wallpaperask.com/wp-content/uploads/Backgrounds-download-abstract-minimalist-wallpaper-HD.jpg"); */
+a { color: #342e37; }
+
+.bit-only{
+  font-size: 17px;
+}
+
+.img{
+  border : none !important;
+}
+.img send-img:hover{
+  border: 2px solid #342e37;
+}
+
+h1.title
+{
+	/* letter-spacing: 1.4; */
+	font-weight: bold;
+	color: #342e37;
+  margin: 0 auto;
+	font-size: 38px;
+  display: block;
+
+}
+
+#profile-pic{
+  border-radius: 0px;
+  outline:none !important;
+
+  border: 3px inset #37c0f7;
+  /* border-spacing: 15px; */
+  /* padding: 15px; */
+}
+
+h2.title
+{
+	/* letter-spacing: 1.4; */
+	font-weight: bold;
+	color: #342e37;
+	text-align: center;
+	font-size: 36px;
+}
+.veridium-img{
+	border: 5px solid #37c0f7;
+	border-radius: 0px;
+	margin-top: 3px;
+}
+
+.veridium-img2{
+	border: 3px solid #37c0f7;
+	border-radius: 13px;
+	margin-top: -8px;
+}
+
+.veridium-img3{
+	border: 3px solid #37c0f7;
+	border-radius: 13px;
+	margin-top: -8px;
+}
+
+.sepa-img{
+	margin-top: 9px;
+
+}
+.centerme{
+	margin: 0 auto;
+	text-align: center;
+  display: block;
+}
+
+.navbar-brand
+{
+	/* letter-spacing: 1.4; */
+  display: block !important;
+	font-weight: bold;
+  color: #342e37;
+	font-size: 25px;
+  font-style: bold;
+
+}
+.nav{
+  font-weight: bold;
+  color: #f2f2f2;
+  font-size: 21px;
+
+}
+
+#features{
+  background-color: #f2f2f2;
+}
+
+#myScrollspy {
+opacity: 0;
+transform: translate(0, 20px);
+transition: all 1s;
+}
+
+#myScrollspy.visible {
+opacity: 1;
+transform: translate(0, 0);
+}
+
+button .go-pay{
+  width: 100%;
+  border-radius: 0px;
+  outline:none !important;
+
+
+}
+button .google-signin {
+  background-image: url('assets/images/google_signin/web/2x/light2.png');
+  background-repeat:no-repeat;
+  background-size: cover;
+  border-radius: 0px;
+  outline:none !important;
+
+
+}
+
+.leftform{
+  margin-left: -15px;
+
+}
+.leftme{
+	text-align: left;
+  float: left;
+}
+.rightme{
+  text-align: right;
+  float: right;
+}
+#send-email-link{
+  text-align: center;
+  width: 221px;
+    /* padding-bottom: 20%;  */
+}
+.enter{
+margin-top: 7px
+}
+.unhide
+{
+  display: block;
+}
+.hide
+{
+  display: none;
+}
+
+#profile-pic{
+  border-radius: 20px;
+}
+
+.end-line
+{
+	position: fixed;
+	height: 5px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #37c0f7;
+}
+.modal .modal-dialog .modal-content .modal-header .modal-body{
+  background:  #ffffff;
+  border-radius: 0px !important;
+  outline:none !important;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.2);
+
+}
+.modal-title{
+  font-weight: 700;
+}
+
+p{
+  font-size: 17px;
+  word-wrap: break-word;
+}
+
+body {
+  background-color: #f2f2f2;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-800 0 2900 900'%3E%3Cpolygon fill='%2337c0f7' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23594688' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%2352c8e4' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%234972aa' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%2378cdd2' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%235499bd' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%239bd0c6' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%2380bdc9' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23b9d2c5' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23b8dfd9' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23ced4cd' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23f1fff6' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+   /* background-color: #f2f2f2;
+   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='152' height='152' viewBox='0 0 152 152'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='temple' fill='%2337c0f7' fill-opacity='0.21'%3E%3Cpath d='M152 150v2H0v-2h28v-8H8v-20H0v-2h8V80h42v20h20v42H30v8h90v-8H80v-42h20V80h42v40h8V30h-8v40h-42V50H80V8h40V0h2v8h20v20h8V0h2v150zm-2 0v-28h-8v20h-20v8h28zM82 30v18h18V30H82zm20 18h20v20h18V30h-20V10H82v18h20v20zm0 2v18h18V50h-18zm20-22h18V10h-18v18zm-54 92v-18H50v18h18zm-20-18H28V82H10v38h20v20h38v-18H48v-20zm0-2V82H30v18h18zm-20 22H10v18h18v-18zm54 0v18h38v-20h20V82h-18v20h-20v20H82zm18-20H82v18h18v-18zm2-2h18V82h-18v18zm20 40v-18h18v18h-18zM30 0h-2v8H8v20H0v2h8v40h42V50h20V8H30V0zm20 48h18V30H50v18zm18-20H48v20H28v20H10V30h20V10h38v18zM30 50h18v18H30V50zm-2-40H10v18h18V10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); */
+background-attachment: fixed;
+  background-size: cover;
+  /* background-attachment: fixed;
+  background-size: cover;
+  background-image: url('https://png.pngtree.com/thumb_back/fw800/back_pic/03/95/13/4757ebcead939ef.jpg');
+  background-size: cover; */
+
+  /* background-size: 1440px 780px; */
+  /* background: #76b852; /* fallback for old browsers */
+  /* background: -webkit-linear-gradient(right, #76b852, #8DC26F); */
+  /* background: -moz-linear-gradient(right, #76b852, #8DC26F); */
+  /* background: -o-linear-gradient(right, #76b852, #8DC26F); */
+  /* background: linear-gradient(to left, #76b852, #8DC26F);  */
+
+  font-family: "Rajdhani", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border-radius: 0px;
+
+  outline:none !important;
+
+
+}
+html{
+  letter-spacing: 1px;
+  outline:none !important;
+
+}
+/* input[type="text"] {
+  font-size:17px;
+} */
+
+.profile-button{
+  display: block;
+  width: 100%;
+  font-size: 12px;
+  border-radius: 0px;
+  outline:none !important;
+
+
+
+}
+@media (max-width: 800px) {
+	.w-25,
+	.bootstrap-select>.dropdown-toggle,
+	.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn)
+	{
+	    width: 100%!important;
+	}
+}
